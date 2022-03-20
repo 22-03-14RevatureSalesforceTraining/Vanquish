@@ -1,0 +1,112 @@
+/*
+    NameOfFile: ProjectZeroCSS.css
+    Author: Jacob Blockey
+    CreatedDate: 3/18/22
+    LastModifiedDate: 3/20/22
+    PurposeOfFile: Used to create all the styling for the ProjectZero.html file.
+*/
+h1 {
+    text-align: center;
+    color: rgb(245, 62, 49);
+    border: 1px solid rgb(245, 62, 49) 
+}
+
+#foodImage {
+    /*the following is for creating the size of my image*/
+    width: 50%;
+    height: 600px;
+    object-fit: contain;
+    /*Positioning of the picture*/
+    position: relative;
+    left: 100px;
+}
+
+#logo {
+    /* the following is for placing my logo (profile picture) in the top right corner of the webpage*/
+    position: absolute;
+    top: 60px;
+    right: 150px;
+    /*the following is for creating the size of my logo and making it into a cirlce*/
+    border-radius: 50%;
+    width: 75x;
+    height: 100px;
+}
+
+#ingredientsTable{
+    position: relative;
+    bottom: 521px;
+    left: 58%;
+}
+
+#equipmentTable{
+    position: relative;
+    bottom: 521px;
+    left: 58%;
+    text-align: center;
+}
+
+table, th, td{
+    background-color: rgba(151, 172, 240, .25);
+    
+    width: 700px;
+    font-size: 25px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+ol{
+    position: relative;
+    bottom: 525px;
+    left: 80px;
+    font-size: large;
+
+    /*Found this code here to create the colored box: https://www.quora.com/How-do-you-create-a-box-filled-with-a-color-with-HTML-CSS */
+    border: thin solid black; 
+	width:400px; 
+	height:250px; 
+	text-align: justify; 
+	background-color: rgba(151, 172, 240, .25); 
+	word-wrap: break-word; /* words won't go from the boundry */ 
+	margin: 10px 20px auto; 
+	/* top, left, bottom*/ 
+	padding: 10px 20px 30px; 
+	float: left; 
+}
+
+form {
+    position: relative;
+    bottom: 515px;
+    left: 70px;
+}
+
+#aboutMe{
+    /*Found this code here to create the colored box: https://www.quora.com/How-do-you-create-a-box-filled-with-a-color-with-HTML-CSS */
+    border: thin solid black; 
+	width:1000px; 
+	height:100px; 
+	text-align: justify; 
+	background-color: rgba(151, 172, 240, .25); 
+	word-wrap: break-word; /* words won't go from the boundry */ 
+	margin: 10px 20px auto; 
+	/* top, left, bottom*/ 
+	padding: 10px 20px 30px;
+	float: left;
+
+    font-size: larger;
+    
+    position: relative;
+    bottom: 520px;
+    left: 50px;
+}
+
+#apiCall{
+    position: relative;
+    bottom: 495px;
+    left: 800px;
+}
+
+button {
+    position:relative;
+    right: 470px;
+    bottom: 535px;
+}
