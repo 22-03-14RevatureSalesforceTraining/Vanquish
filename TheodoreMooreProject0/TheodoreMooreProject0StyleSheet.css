@@ -1,0 +1,113 @@
+
+body{
+    background-color: lavender;
+} 
+h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    outline-style: solid;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 300%;
+    color: purple;
+    outline-color: purple;
+        
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 75px;
+    margin-right: 75px;
+    width: 300px;
+    flex-wrap: wrap;
+    max-height: 400px;
+}
+
+
+.gameArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+form{
+    
+    text-align: center;
+    justify-content: center;
+
+    height: 500px;
+    width: 400px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    outline-style: solid;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 150%;
+
+    color: purple;
+    background-image: linear-gradient(lavender, white, lavender);
+}
+
+#rules {
+    width: 400px;
+
+    padding: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+
+    outline-style: solid;
+
+    font-family: 'Times New Roman', Times, serif;
+    color: purple;
+    background-image: linear-gradient(lavender, white, lavender);
+}
+
+#responseArea {
+
+   outline-style: solid;
+   padding-top: 25px; 
+   padding-bottom: 25px;
+   margin-bottom: 15px;
+}
+#guess {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 10%;
+    width: 50%;
+}
+button {
+ 
+    width: 25%;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    color: purple;  
+    
+
+}
+img {
+    margin-top: 25px;
+    height: 100px;
+    width: 300px;
+}
