@@ -2,7 +2,8 @@
 <html>
 
     <head>
-
+        <script src="./TheodoreMooreProject0JS.js">
+        </script>
         <link rel="stylesheet" href="./TheodoreMooreProject0StyleSheet.css">
     </head>
 
@@ -18,19 +19,19 @@
                     Guess a number!
                 </label>
                 <input type="text" id="guess">
-                <button type="button">
+                <button id="userInput" type="button">
                     Guess!
                 </button>
 
                 <label>
-                    Only pick numbers 1-100
+                    Only pick numbers 0-100
                 </label>
             </form>
             
             <span  id= "rules" class ="gameArea">
                 Rules:
                 Guess a number and the text to the left will display over or under. 
-                You have 10 guess to get it right and it a random number between 1 and 100. Good Luck!  
+                You have 10 guess to get it right and it a random number between 0 and 100. Good Luck!  
                 Your guesses will display in the list below, and results on the table to the left.
                 <a href="https://en.wikipedia.org/wiki/Over%E2%80%93under#:~:text=An%20over%E2%80%93under%20or%20over,or%20lower%20than%20that%20number."> 
                     This is a link decribing the history of the game!
@@ -38,7 +39,7 @@
                 
             </span>
             
-             <img class="gameArea" id="win"src="./winImage.png">
+             <img class="invisibleImage" id="winLoss" src="./winImage.png" alt="">
              
            
         </div>

@@ -111,3 +111,7 @@ img {
     height: 100px;
     width: 300px;
 }
+
+.invisibleImage {
+    visibility: hidden;
+}
