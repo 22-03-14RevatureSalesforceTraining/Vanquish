@@ -16,7 +16,7 @@ h1 {
         
 }
 
-div {
+#game {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -114,4 +114,41 @@ img {
 
 .invisibleImage {
     visibility: hidden;
+}
+
+#resultArea {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 130px;
+    margin-right: 200px;
+}
+
+ol {
+    display: inline;
+    font-size: 150%;
+    color: purple;
+    outline-style: solid;
+    padding-left: 100px;
+    padding-right: 300px;
+
+}
+li {
+    color: purple;
+
+
+}
+table {
+    display: inline;
+}
+th {
+    font-size: 200%;
+    color:purple;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline-style: solid;
+}
+td {
+    color: purple;
+    padding: 5px;
+    outline-style: solid;
 }

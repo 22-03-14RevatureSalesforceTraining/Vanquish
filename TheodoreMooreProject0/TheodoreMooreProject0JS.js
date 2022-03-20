@@ -9,6 +9,7 @@ var randomNumber= 0;
 //This will be the number have guesses the player has made in the current iteration of the game
 var guesses= 0;
 
+var roundGuesses=[];
 /**
 This function starts the game from scratch, it resets the textbox 
 that the game was in and gets a new random number
@@ -39,6 +40,31 @@ function winGame(){
 
     //this sets our class to make it visible
     winImage.className="gameArea";
+
+    //get the table from the document to update
+    var results = document.querySelector("#resultTable");
+    //populate a string with the results from the current game
+    var gameResult= "<tr> <td> "+randomNumber+"</td> <td> W </td> <td> ";
+    gameResult= gameResult+guesses+ "</td> </tr>";
+    //append the results from the current game to html
+    results.innerHTML=results.innerHTML+gameResult;
+
+    //finds the list item to add guesses to
+    var gameGuesses= document.querySelector("#guessList");
+    gameGuesses.className="nothing";
+
+    //clear out list 
+    gameGuesses.innerHTML="";
+
+    //while loop runs as long as items are still in list
+    while(roundGuesses.length!=0){  
+        //item pops off array each item
+        var listItems= "<li>"+roundGuesses.pop()+("</li>");
+        //appends that value to list
+        gameGuesses.innerHTML= listItems+ gameGuesses.innerHTML;
+    }
+    
+
 }
 
 /**
@@ -50,6 +76,28 @@ function loseGame(){
     lossImage.setAttribute("src", "./loseImage.jpg");
     //this sets our class to make it visible
     lossImage.className="gameArea";
+    //get the table from the document to update
+    var results = document.querySelector("#resultTable");
+    //populate a string with the results from the current game
+    var gameResult= "<tr> <td> "+randomNumber+"</td> <td> L </td> <td> ";
+    gameResult= gameResult+guesses+ "</td> </tr>";
+    //append the results from the current game to html
+    results.innerHTML=results.innerHTML+gameResult;
+
+    //finds the list item to add guesses to
+    var gameGuesses= document.querySelector("#guessList");
+    gameGuesses.className="nothing";
+
+    //clear out list 
+    gameGuesses.innerHTML="";
+
+    //while loop runs as long as items are still in list
+    while(roundGuesses.length!=0){  
+        //item pops off array each item
+        var listItems= "<li>"+roundGuesses.pop()+("</li>");
+        //appends that value to list
+        gameGuesses.innerHTML= listItems+ gameGuesses.innerHTML;
+    }
 }
 
 /**
@@ -89,16 +137,22 @@ function userGuess(){
         else if(myGuess<randomNumber){
             result.innerHTML="Your guess was under the value.";
             guesses+= 1;
+            //psuhes guess onto list
+            roundGuesses.push(myGuess);
         }
         else if(myGuess>randomNumber){
             result.innerHTML="Your guess was over the value.";
             guesses+= 1;
+            // pushes guess onto list
+            roundGuesses.push(myGuess);
         }
         /**
             Checks if the user has won and if so runs the win function and resets the game
             If not checks the number of guesses and if 10 runs loss function and resets game
         */
         if (myGuess==randomNumber){
+            // pushes guess onto list
+            roundGuesses.push(myGuess);
             winGame();
             startGame();
         }
@@ -112,6 +166,7 @@ function userGuess(){
         window.alert("This is not a number");
 
     }
+    
 }
 
 window.onload= function(){
