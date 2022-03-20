@@ -2,6 +2,24 @@
     background-color: bisque;
     box-sizing: border-box;
     width: 100%;
-    margin: 100px;
+    margin: 25px;
+    padding: 25px;
+    font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-bar{
+    width: 100px;
+    height: 90px;
+    background-color: gold;
+    color: black;
+    border-radius: 20px;
+}
+
+.nav-bar:hover{
+    width: 110px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
 }
