@@ -17,13 +17,13 @@ window.onload = function () {
 function buttonPress() {
     try {
         document.getElementById('quantityOne').innerHTML = quantity1;
-        document.getElementById('quantityTwo').innerHTML = quantity2;
-        document.getElementById('quantityThree').innerHTML = quantity3;
-        document.getElementById('quantityFour').innerHTML = quantity4;
-        document.getElementById('quantityFive').innerHTML = quantity5;
-        document.getElementById('quantitySix').innerHTML = quantity6;
-        document.getElementById('quantitySeven').innerHTML = quantity7;
-        document.getElementById('quantityEight').innerHTML = quantity8;
+        document.getElementById('quantityTwo').innerHTML = quantity2 + "lb";
+        document.getElementById('quantityThree').innerHTML = quantity3 + "tbs";
+        document.getElementById('quantityFour').innerHTML = quantity4 + " cups";
+        document.getElementById('quantityFive').innerHTML = quantity5 + "ts";
+        document.getElementById('quantitySix').innerHTML = quantity6 + " cloves";
+        document.getElementById('quantitySeven').innerHTML = quantity7 + " cans";
+        document.getElementById('quantityEight').innerHTML = quantity8 + " cups";
     } catch (e) {
         console.log("This didn't work");
     } finally {
