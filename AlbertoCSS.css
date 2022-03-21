@@ -1,6 +1,7 @@
 /* Body background set to yellow */
 body {
-    background-image: url('./images/pepperBackground.png');
+    background-image: url('./images/backgroundPeppers.jpg');
+    
 }
 
 /* Attributes of the "Stuffed Peppers" header */
@@ -15,8 +16,10 @@ body {
 }
 
 #stepsHeader {
+    display: flex;
     position: absolute;
-    color: rgb(0, 0, 0);
+    font-family: 'Chiller', 'Brush Script MT', 'Times New Roman';
+    color: rgb(255, 0, 0);
     top: 600px;
     left: 800px;
 }
@@ -49,6 +52,8 @@ body {
     padding: 20px;
     color: rgb(255, 255, 255);
     text-indent: 5%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* table attributes */
@@ -63,12 +68,13 @@ body {
 /* List attributes */
 #stepsList {
     position: absolute;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     top: 650px;
     left: 800px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
-    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* button position */
@@ -83,5 +89,9 @@ body {
     position: absolute;
     top: 650px;
     left: 350px;
-    color: gold;
+    color: rgb(5, 138, 0);
+}
+
+a:hover {
+    font-size: 150%;
 }

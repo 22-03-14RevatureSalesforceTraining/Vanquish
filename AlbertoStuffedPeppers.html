@@ -5,8 +5,9 @@
         <title>Stuffed Peppers</title>
         <link rel="stylesheet" href="AlbertoCSS.css">
         <link rel="stylesheet" href="AlbertoJS.js">
-        <script type="text/javascript" src="AlbertoJS.js"></script>
+        <script src="AlbertoJS.js"></script>
     </head>
+
     <!--Body Containing Page Contents-->
     <body>
         <h1 id="headerTitle">Stuffed Peppers</h1>
@@ -25,24 +26,6 @@
 
         <!--Attempt at making the button. Requires further study-->
         <button id="changeRecipeButton" type="button" onclick="buttonPress">Alternate Recipe</button>
-        <script>
-            const quantities = ["4", "1lb", "2tbsp", "1 cup", "1ts", "1 clove", "1 can", "3/4 cup"];
-
-            try {
-                let btn = document.getElementById('changeRecipeButton');
-                btn.addEventListener('click', buttonPress);
-
-                function buttonPress() {
-                    document.getElementId('quantityOne').innerHTML = 8;
-                }
-                
-            }
-            catch(e) {
-                console.log("This didn't work");
-            }
-
-        </script>
-
 
         <!--Table with ingredients-->
         <table id="ingredientsTable" class="table-bordered">
@@ -55,10 +38,7 @@
             <tbody>
                 <tr>
                     <td>
-                        <span id="quantityOne"></span>
-                        <script>
-                            document.getElementById("quantityOne").innerHTML = quantities[0];
-                        </script>
+                        <span id="quantityOne">4</span>
                     </td>
                     <td>
                         <span id="ingredientOne"></span>
