@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <!--Head Containing Title and file references-->
+    <head>
+        <title>Stuffed Peppers</title>
+        <link rel="stylesheet" href="AlbertoCSS.css">
+        <link rel="stylesheet" href="AlbertoJS.js">
+        <script type="text/javascript" src="AlbertoJS.js"></script>
+    </head>
+    <!--Body Containing Page Contents-->
+    <body>
+        <h1 id="headerTitle">Stuffed Peppers</h1>
+        <img id="stuffedPeppersPic" src="./images/stuffedPeppersImg.jpg" alt="Stuffed Peppers Looking Yummmmm" id="stuffedPeppersPic">
+        <img id="logo" src="./images/pepperLogo.png" alt="Logo">
+
+        <!--Paragraph Describing Stuffed Peppers-->
+        <p id="description"; style="position: absolute; left: 800px; top: 300px;"> 
+            The Stuffed Pepper is common cuisine that has had many variations over the years.
+            Although most variations consist of a hollowed out pepper filled with meat, rice, and cheese,
+            there have been even more creative recipes throughout the world. In Hong Kong the recipe comes with
+            filled sausages and is known as the "Three Great Treasures". In spain the recipe usually
+            comes with cod covered in a red sauce. For our recipe today we will be doing something a bit more traditional.
+        </p>
+
+
+        <!--Attempt at making the button. Requires further study-->
+        <button id="changeRecipeButton" type="button" onclick="buttonPress">Alternate Recipe</button>
+        <script>
+            const quantities = ["4", "1lb", "2tbsp", "1 cup", "1ts", "1 clove", "1 can", "3/4 cup"];
+
+            try {
+                let btn = document.getElementById('changeRecipeButton');
+                btn.addEventListener('click', buttonPress);
+
+                function buttonPress() {
+                    document.getElementId('quantityOne').innerHTML = 8;
+                }
+                
+            }
+            catch(e) {
+                console.log("This didn't work");
+            }
+
+        </script>
+
+        <!--Table with ingredients-->
+        <table id="ingredientsTable" class="table-bordered">
+            <thead>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Ingredient</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <span id="quantityOne"></span>
+                        <script>
+                            document.getElementById("quantityOne").innerHTML = quantities[0];
+                        </script>
+                    </td>
+                    <td>
+                        <span id="ingredientOne"></span>
+                        <script>
+                            let ingredient1 = "Large Bell Peppers";
+                            document.getElementById("ingredientOne").innerHTML = ingredient1;
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="quantityTwo"></span>
+                        <script>
+                            document.getElementById("quantityTwo").innerHTML = quantities[1];
+                        </script>
+                    </td>
+                    <td>
+                        <span id="ingredientTwo"></span>
+                        <script>
+                            let ingredient2 = "Ground Beef";
+                            document.getElementById("ingredientTwo").innerHTML = ingredient2;
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="quantityThree"></span>
+                        <script>
+                            document.getElementById("quantityThree").innerHTML = quantities[2];
+                        </script>
+                    </td>
+                    <td>
+                        <span id="ingredientThree"></span>
+                        <script>
+                            let ingredient3 = "Chopped Onion";
+                            document.getElementById("ingredientThree").innerHTML = ingredient3;
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="quantityFour"></span>
+                        <script>
+                            document.getElementById("quantityFour").innerHTML = quantities[3];
+                        </script>
+                    </td>
+                    <td>
+                        <span id="ingredientFour"></span>
+                        <script>
+                            let ingredient4 = "Cooked Rice";
+                            document.getElementById("ingredientFour").innerHTML = ingredient4;
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="quantityFive"></span>
+                        <script>
+                            document.getElementById("quantityFive").innerHTML = quantities[4];
+                        </script>
+                    </td>
+                    <td>
+                        <span id="ingredientFive"></span>
+                        <script>
+                            let ingredient5 = "Salt";
+                            document.getElementById("ingredientFive").innerHTML = ingredient5;
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="quantitySix"></span>
+                        <script>
+                            document.getElementById("quantitySix").innerHTML = quantities[5];
+                        </script>
+                    </td>
+                    <td>
+                        <span id="ingredientSix"></span>
+                        <script>
+                            let ingredient6 = "Garlic";
+                            document.getElementById("ingredientSix").innerHTML = ingredient6;
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="quantitySeven"></span>
+                        <script>
+                            document.getElementById("quantitySeven").innerHTML = quantities[6];
+                        </script>
+                    </td>
+                    <td>
+                        <span id="ingredientSeven"></span>
+                        <script>
+                            let ingredient7 = "Tomato Sauce";
+                            document.getElementById("ingredientSeven").innerHTML = ingredient7;
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="quantityEight"></span>
+                        <script>
+                            document.getElementById("quantityEight").innerHTML = quantities[7];
+                        </script>
+                    </td>
+                    <td>
+                        <span id="ingredientEight"></span>
+                        <script>
+                            let ingredient8 = "Shredded Mozarella Cheese";
+                            document.getElementById("ingredientEight").innerHTML = ingredient8;
+                        </script>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!--List with steps-->
+        <h1 id="stepsHeader">Steps</h1>
+        <ol id="stepsList">
+            <li>Heat oven to 350 degrees Fahrenheit</li>
+            <li>Cut top of pepper off. Remove seeds and membranes. 
+                In oven add enough water to cover peppers and heat to boiling.
+                Cook for about 2 minutes then drain the water.
+            </li>
+            <li>In skillet cook beef and onion over medium heat for 8 to 10 minutes. Stir in rice,
+                salt, garlic and 1 cup of the tomato sauce. Cook until hot.
+            </li>
+            <li>Stuff peppers with beef mixture. Stand peppers upright in square glass baking dish.
+                Pour remaining tomato sauce over peppers.
+            </li>
+            <li>
+                Cover tightly with foil, bake 10 minutes. 
+                Uncover and bake 15 minutes longer. 
+                Sprinkle with cheese and serve when tender.
+            </li>
+        </ol>
+
+        <a id="delish" href="https://www.delish.com/cooking/recipe-ideas/a23014857/classic-stuffed-peppers-recipe/">delish Recipe Page</a>
+
+    </body>
+</html>

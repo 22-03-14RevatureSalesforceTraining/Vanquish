@@ -1,0 +1,87 @@
+/* Body background set to yellow */
+body {
+    background-image: url('./images/pepperBackground.png');
+}
+
+/* Attributes of the "Stuffed Peppers" header */
+#headerTitle {
+    display: flex;
+    font-family: 'Chiller', 'Brush Script MT', 'Times New Roman';
+    font-size: 130px;
+    color: rgb(255, 0, 0);
+    justify-content: center;
+    align-items: center;
+    border-width: thin;
+}
+
+#stepsHeader {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 600px;
+    left: 800px;
+}
+
+/* Stuffed Peppers Image attributes Set here for positioning */
+#stuffedPeppersPic {
+    position: absolute;
+    top: 250px;
+    right: 1150px;
+    width: 600px;
+    height: 400px;
+}
+
+/* logo image attributes */
+#logo {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    width:190px;
+    height:190px;
+}
+
+/* description div attributes */
+#description {
+    position: absolute;
+    top: 300px;
+    right: 200px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+    text-indent: 5%;
+}
+
+/* table attributes */
+#ingredientsTable {
+    position: absolute;
+    border: 1px solid;
+    top: 700px;
+    left: 300px;
+    color: gold;
+}
+
+/* List attributes */
+#stepsList {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    top: 650px;
+    left: 800px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* button position */
+#changeRecipeButton {
+    position: absolute;
+    top: 900px;
+    left: 300px;
+}
+
+/* delish website hyperlink attributes */
+#delish {
+    position: absolute;
+    top: 650px;
+    left: 350px;
+    color: gold;
+}
