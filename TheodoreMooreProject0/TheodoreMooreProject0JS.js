@@ -1,6 +1,11 @@
 /**
 Author: Theodore Moore
+FileName TheodoreMooreProject0JS.js
+For use with TheodoreMooreProject0HTML.html
 This is the javascript for the Project 0 Website
+This allows us to run the game portion of the over under 
+guessing game
+Last Modified: 3/20/2022
 */
 
 
@@ -10,11 +15,11 @@ var randomNumber= 0;
 var guesses= 0;
 
 var roundGuesses=[];
+
 /**
 This function starts the game from scratch, it resets the textbox 
 that the game was in and gets a new random number
 */
-
 function startGame(){
     //This is the label that displays result of our guess that we want to reset after winning
     var result=document.querySelector("#responseArea");
@@ -36,7 +41,7 @@ function startGame(){
 function winGame(){
     // this gets our image and sets it to the right file
     var winImage = document.querySelector("#winLoss");
-    winImage.setAttribute("src", "./winImage.png");
+    winImage.setAttribute("src", "winImage.png");
 
     //this sets our class to make it visible
     winImage.className="gameArea";
@@ -173,8 +178,34 @@ window.onload= function(){
     //starts the game
     startGame();
 
+    
+    
+    
+    // creates ruleRequest which is an http request
+    var ruleRequest = new XMLHttpRequest();
+    //ruleBox is the rules that we have
+    const ruleBox = document.querySelector("#rules");
+
+    //when the ready state for the ruest changes check if the request is completed and successful
+    ruleRequest.onreadystatechange= function(){
+    if(ruleRequest.readyState==4 && ruleRequest.status == 200){
+        //if so create my rules which should recieve a json file
+        var myRules = JSON.parse(ruleRequest.response);
+        //place the contents of such in the rulebox.innerHTML
+        ruleBox.innerHTML= myRules.rules+ ruleBox.innerHTML;
+    }
+
+    }
+    
+    ruleRequest.open("GET", "https://mocki.io/v1/a99413a8-ca09-40ff-af52-bf2cf6ba736f");
+    ruleRequest.send();
+
+
+
     //set an event listener for userGuess on the button click
     const myButton= document.querySelector("#userInput");
     myButton.addEventListener("click", userGuess);
+
+    
 
 }
