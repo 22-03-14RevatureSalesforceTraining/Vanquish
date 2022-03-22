@@ -35,7 +35,7 @@ html, body{
 
 
 h1{
-    background-color: blue;
+    background-color: black;
 }
 /********************************
 Styling Header section
@@ -45,8 +45,12 @@ nav {
     text-align: center;
     padding: 10px 0;
     margin: 20px 0 0;
+    background-color: gold;
 
-    background-color: crimson;
+}
+
+nav a.selected, nav a:hover {
+    color: crimson;
 }
 
 nav ul{
