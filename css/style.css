@@ -90,6 +90,45 @@ header{
 }
 
 /********************************
+Styling Form section
+*********************************/
+form{
+    margin: left;
+}
+
+legend {
+    color: white;
+    font-size: 200%;
+    text-decoration: underline;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+label {
+    color: white;
+    font-size: 200%;
+    font-family:'Courier New', Courier, monospace
+}
+
+input[type=submit]{
+    padding: 5px;
+    margin-left: 5%;
+    background-color: white;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 150%;
+
+}
+
+input[type=text]{
+    padding: 5px;
+    border: 2px solid silver;
+    border-radius: 5px;
+
+}
+
+
+
+/********************************
 Styling Footer section
 *********************************/
 footer{
