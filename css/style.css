@@ -47,6 +47,15 @@ nav {
 Styling Footer section
 *********************************/
 footer{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    padding: 5%;
+    clear: both;
+    font-size: 30px;
+    text-align: center;
+
     background-color: brown;
     color: black;
 }
