@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <!--file is Project0.html*/
+            /*author = Dalton Faber*/
+            /* date created = 3/17/2022*/
+            /* last modify date 3/22/2022*/
+            /*Creating an interactive api that connects to an external api*/
+            /*html file creating an interactive webpage reciepe on how to make pancakes*-->
+
+            <!-- Tab Title & author--> 
+            <title>Pancake Recipe</title>
+            <meta name="author" content="Dalton Faber">
+            <!-- Importing JS and CSS file--> 
+            <link rel="stylesheet" href= "./Project0.js">
+            <link rel="stylesheet" href="./Project0.css">
+            <script src= "Project0.js"></script>
+            <style src="Project0.css"></style>
+        </head>
+    
+        <body>
+            <!--Pancake main image -->
+            <h2 id ="pancakeH">Pancake Recipe</h2>
+            <!--Image of a Pancake stack. Main Image for article-->
+            <img id ="pancakeIMG" src="Pancake.jpg" >
+            
+            <!--Reference link to the recipe and reference to author of the recipe-->
+            <div class = "hyperlink" > 
+                Recipe by <a href = "https://www.thespeckledpalate.com/old-fashioned-pancake-recipe/">
+                    Erin Parker</a>
+                , The Speckled Palate 
+            </div>
+
+            <!--Tools need to make pancake-->
+            <div class = "list">
+                <ul><span id = "tools">Tools Needed</span>
+                    <li><a href="https://www.amazon.com/Creuset-Stoneware-Multi-Cerise-Cherry/dp/B00566Q8UE/ref=as_li_ss_tl?ie=UTF8&keywords=Le+Creuset+Large+Multi+Bowl+in+Cerise&linkCode=sl1&linkId=31ebcde500eac1ba95ad9423b964ef9a&qid=1486152432&sr=8-1&tag=thespeckledpalat-1-bg-20">
+                            Large mixing bowl
+                        </a>
+                    </li>
+                    <li><a href="https://www.amazon.com/Pyrex-Pyrex-1-Pint-Measuring-Cup/dp/B01L4JNR0U/ref=as_li_ss_tl?s=kitchen&ie=UTF8&qid=1488861543&sr=1-5&keywords=pyrex+measuring+cup&linkCode=sl1&tag=thespepal06-20&linkId=b6a28fbe0bdb458a5dffe681449ef696">
+                            Small measuring bowl
+                        </a>
+                    </li>
+                    <li><a href="https://www.amazon.com/OXO-Grips-11-Inch-Better-Balloon/dp/B00004OCNS/ref=as_li_ss_tl?dchild=1&keywords=oxo+wire+whisk&qid=1602528537&s=home-garden&sr=1-3&linkCode=sl1&tag=thespepal06-20&linkId=1e32967dbe9ddde8b3e980f5fb32b4a8&language=en_US>">
+                            Whisk
+                        </a>
+                    </li>
+                    <li><a href="https://www.williams-sonoma.com/products/williams-sonoma-open-kitchen-silicone-spatulas-set-of-5/?pkey=s%7Crubber+spatula%7C531&clickid=W5fUbi0ioxyIRVzXvhRCNXxOUkGTa-1qETbGRE0&irgwc=1&cm_cat=116548&cm_ven=afshoppromo&bnrid=3917500&cm_ite=&cm_pla=ir&irpid=116548">
+                            Spatula
+                        </a>
+                    </li>
+                    <li><a href="https://www.amazon.com/Norpro-703-Grip-EZ-2-Tablespoon-Stainless/dp/B000SSVRYM/ref=as_li_ss_tl?s=home-garden&ie=UTF8&qid=1497635121&sr=1-1&keywords=2+tablespoon+cookie+scoop&linkCode=sl1&tag=thespepal06-20&linkId=e74dd43fb653d88b95156ec7c41f78d5">
+                            2-Tablespoon Cookie Scoop
+                        </a>
+                    </li>
+                    <li><a href="https://www.amazon.com/Lodge-LPGI3-Reversible-Griddle-10-44-inch/dp/B00008GKDQ/ref=as_li_ss_tl?ie=UTF8&qid=1497625535&sr=8-3&keywords=lodge+grill+pan&linkCode=sl1&tag=thespepal06-20&linkId=3bc41aef8bc68a69bf4b416884abafc8">
+                            Cast Iron Griddle
+                        </a>
+                    </li>
+                    <li><a href="https://www.amazon.com/dp/B072QT1LYY/ref=sspa_dk_detail_0?psc=1&pd_rd_i=B072QT1LYY&pd_rd_w=LFY1E&pf_rd_p=0c758152-61cd-452f-97a6-17f070f654b8&pd_rd_wg=7dHwb&pf_rd_r=BNMDJAJEN1S3CT5VNMY4&pd_rd_r=b1ef058d-cddf-47cc-8a95-bdd78d67c8e9&s=kitchen&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFURkE1NTdPRDM5Q0UmZW5jcnlwdGVkSWQ9QTA4Njc3NjUxNTFVNEZUTUNQMVZWJmVuY3J5cHRlZEFkSWQ9QTAzODM3MjEzOUtINDRYMExWMjk4JndpZGdldE5hbWU9c3BfZGV0YWlsJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==">
+                            Spatula
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--Ingredient table and the values change depending on input-->
+            <div class = "ingredients">Ingredients for <spam id = "amountPancake">14</spam> pancakes</div>
+            <table>     
+                <tr>
+                    <th>Amount</th>
+                    <th>Ingredient</th>
+                </tr>
+                <tr>
+                    <td id = "flour">1.5 cups</td>
+                    <td>all-purpose flour</td>
+                </tr>
+                <tr>
+                    <td id = "sugar">2 tablespoons</td>
+                    <td>granulated sugar</td>
+                </tr>
+                <tr>
+                    <td id = "bPowder">2 teaspoons</td>
+                    <td>baking powder</td>
+                </tr>
+                <tr>
+                    <td id = "bSoda">0.5 teaspoons</td>
+                    <td >baking soda</td>
+                </tr>
+                <tr>
+                    <td id = "salt">0.5 teaspoons</td>
+                    <td>kosher salt</td>
+                </tr>
+                <tr>
+                    <td id = "milk">1.5 cups </td>
+                    <td>milk</td>
+                </tr>
+                <tr>
+                    <td id = "eggs">2</td>
+                    <td>eggs</td>
+                </tr>
+                <tr>
+                    <td id = "vanilla">1 teaspoon</td>
+                    <td>vanilla extract</td>
+                </tr>
+                <tr>
+                    <td id = "oil">2 tablespoons</td>
+                    <td> flavorless oil</td>
+                </tr>
+            </table>
+            <!--getting the amount of batches if the want something other 1-->
+            <h4>How many batches?</h4>
+            <form>
+                Amount
+                <input type="text" step="0.1" id="amount">
+                <button type ="button">Submit</button>
+            </form>
+            
+            <!--prints an error if less than or equal to 0-->
+            <div id="error"></div>
+
+            <!--Instructions to make the pancake-->
+        <h2>Instructions</h2>
+        <div class = "list" id ="instructions">
+            <ol>
+                <li id = "space">In a large bowl, measure out the flour, sugar, baking powder,
+                     baking soda and salt. Whisk together until incorporated.
+                </li>
+                <li id = "space">In a small bowl, whisk together the milk, eggs, vanilla extract and oil. 
+                    Whisk together with a fork until combined—you want to ensure that the egg is incorporated.
+                     Why? We do not want random egg whites in our pancakes.</li>
+                <li id = "space">Pour the wet ingredients into the dry ingredients, stirring until just combined.
+                     Be careful not to overmix, as this will affect the texture of the pancakes</li>
+                <li id = "space">Set aside the batter, and let it rest for 5-10 minutes.</li>
+                <li id = "space">While the batter rests, heat a griddle or nonstick skillet over medium heat. 
+                    Grease the pan lightly with butter or cooking spray.</li>
+                <li id = "space">Dollop the pancakes onto the preheated skillet when ready.
+                     I like to use a cookie scoop to measure my pancakes out into 2 tablespoon silver dollar sized ones, 
+                    but you can use a larger measuring scoop if you'd rather larger pancakes.</li>
+                <li id = "space">When several bubbles have formed on the surface, flip the pancakes, and cook through. 
+                    Repeat until all batter has been made into pancakes.</li>
+                <li id = "space">Make a stack of pancakes, and serve with warm maple syrup, softened butter and your favorite fruits.</li>
+            </ol>
+        </div>
+
+        <div id = "api"> </div>
+
+        </body>
+    </html> 
+    

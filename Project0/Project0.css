@@ -1,0 +1,84 @@
+/*file is Project0.css*/
+/*author = Dalton Faber*/
+/* date created = 3/17/2022*/
+/* last modify date 3/22/2022*/
+/*Creating an interactive api that connects to an external api*/
+/*css file for project 0 or styling*/
+
+/*changing font type of the website and give it a background color*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(223, 210, 205);
+}
+/*centering and increase font size of h2*/
+h2{
+    font-size: 300%;
+    text-align: center;
+}
+/* center all div tags*/
+div{
+    text-align: center;
+}
+/*centering lists*/
+.list{
+    text-align: center;
+}
+/* center error message and turning the text red when it appears*/
+#error{
+    text-align: center;
+    color: red;
+}
+/* centering unorder list*/
+ul {
+    text-align: left;
+    display: inline-block;
+}
+/*space between instruction points*/
+#space{
+    padding-bottom: 10px;
+}
+/* creating a padding box around the instruction order list*/
+#instructions{
+    width: 450px;
+    border: 15px solid green;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/*centering pancake img*/
+#pancakeIMG{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/*increasing font size and putting line underneath headers*/
+#tools, h4{
+    font-size: 125%;
+    text-decoration-line:underline;
+}
+/*centering form and it's header*/
+form, h4{
+    text-align: center;
+}
+/*centering table*/
+table{
+    width : 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*creating space between itterations*/
+th, td{
+    padding: 3px 4px;
+}
+/*creating boxes for the table elements and centering it's text*/
+td{
+    border :1px solid;
+    text-align :center;
+}
+/* increasing the ingredient header text size and bolding the text*/
+.ingredients{
+    font-size: 150%;
+    font-style:bold;
+}
