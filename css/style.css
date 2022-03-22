@@ -258,6 +258,7 @@ Styling Gallery section
 
 #gallery li a {
     text-decoration: none;
+    margin: 5px;
 }
 
 .home-button input{
@@ -272,21 +273,45 @@ Styling Gallery section
 
 
 /*************************
-Table
+Table & list
 *************************/
+#food-service {
+    color: white;
+    
+    margin: 25px;
+    padding-left: 550px;
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    
+    
+}
+
+#food-service ul li {
+    color: white;
+    text-align: left;
+    
+    
+}
 
 table {
+    text-align: center;
     font-family: 'GrundschriftBold';
     border-collapse: collapse;
     width: 100%;
+    padding-bottom: 25px;
+    margin-bottom: 40px;
   }
   
   td, th {
-    border: 2px solid greenyellow;
+    border: 3px solid greenyellow;
     text-align: center;
     padding: 8px;
   }
   
   tr:nth-child(even) {
     background-color: yellowgreen;
+  }
+
+  #clear {
+      clear: both;
   }
