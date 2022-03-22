@@ -22,15 +22,31 @@ html, body{
     width: 80%;
     background-size:cover;
     color:white; 
+    background: rgba(0,0,0,0.7);
 }
+
+#textoverimage h2{
+    padding-left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-size: 200%;
+    letter-spacing: 1%;
+}
+
 
 h1{
     background-color: blue;
 }
-h2 {
-    background-color: green;
-}
+
 
 nav {
     background-color: crimson;
+}
+
+/********************************
+Styling Footer section
+*********************************/
+footer{
+    background-color: brown;
+    color: black;
 }
