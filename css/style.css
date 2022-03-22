@@ -37,10 +37,52 @@ html, body{
 h1{
     background-color: blue;
 }
-
+/********************************
+Styling Header section
+*********************************/
 
 nav {
+    text-align: center;
+    padding: 10px 0;
+    margin: 20px 0 0;
+
     background-color: crimson;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0 10px;
+    padding: 10px;
+
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    padding: 15px 10px;
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+    font-size: 300%;
+
+}
+/********************************
+Styling Header section
+*********************************/
+header{
+    float: left;
+    width: 100%;
+    margin: 0 0 2% 0;
+    background-color: orange;
+}
+
+#logo {
+    text-align: center;
+    margin: 0;
+    text-decoration: none;
+    color: white;
 }
 
 /********************************
