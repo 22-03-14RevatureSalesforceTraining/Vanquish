@@ -276,17 +276,17 @@ Table
 *************************/
 
 table {
-    font-family: arial, sans-serif;
+    font-family: 'GrundschriftBold';
     border-collapse: collapse;
     width: 100%;
   }
   
   td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
+    border: 2px solid greenyellow;
+    text-align: center;
     padding: 8px;
   }
   
   tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: yellowgreen;
   }
