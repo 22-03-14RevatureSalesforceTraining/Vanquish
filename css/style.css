@@ -1,5 +1,26 @@
+/********************************
+Styling Form section
+*********************************/
+
+
 html, body{
     min-height: 100%;
+}
+
+h1 {
+    font-family: 'isabella-sans';
+    font-size: 300%;
+}
+
+h2 {
+    font-family: 'isabella-sans';
+    font-size: 250%;
+}
+
+p {
+    font-family: 'isabella-sans';
+    font-weight: bold;
+    font-style: normal;
 }
 #background{
     height: 100%;
@@ -92,21 +113,23 @@ header{
 /********************************
 Styling Form section
 *********************************/
-form{
+form {
     margin: left;
+    text-align: center;
+    background-color: black;
 }
 
 legend {
     color: white;
     font-size: 200%;
     text-decoration: underline;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'isabella-sans';
 }
 
 label {
     color: white;
     font-size: 200%;
-    font-family:'Courier New', Courier, monospace
+    font-family:'isabella-sans';
 }
 
 input[type=submit]{
@@ -114,7 +137,7 @@ input[type=submit]{
     margin-left: 5%;
     background-color: white;
     border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'isabella-sans';
     font-size: 150%;
 
 }
@@ -124,6 +147,10 @@ input[type=text]{
     border: 2px solid silver;
     border-radius: 5px;
 
+}
+
+#email {
+    padding-right: 75px;
 }
 
 
