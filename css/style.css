@@ -127,6 +127,12 @@ article #aboutour-food {
     padding: 20px;
 
 }
+
+.youtube-videos {
+    float: left;
+    margin: 10px;
+    padding: 10px;
+}
 /********************************
 Styling Contact Form section
 *********************************/
@@ -203,7 +209,7 @@ Styling Foods & prices section
 }
 
 /********************************
-Styling Gallery section
+Styling Food Gallery section
 *********************************/
 
 .gallery-images{
