@@ -230,6 +230,21 @@ Styling Gallery section
     font-size: 200%;
     color: silver;
     text-align: center;
+    letter-spacing: 0.3em;
+}
+
+#gallery li a {
+    text-decoration: none;
+}
+
+.home-button input{
+    background-color: crimson;
+    border-radius: 10%;
+    color: white;
+    border-style: solid;
+    border-color: aqua;
+    font-size: 120%;
+    margin-left: 3%;
 }
 
 
