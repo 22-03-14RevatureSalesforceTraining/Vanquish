@@ -1,0 +1,212 @@
+@isTest
+public class  testTest { 
+
+    @isTest static void opportunityVFTest()
+    {
+        
+        Test.startTest();
+        Id recordType = Schema.SObjectType.Opportunity.getRecordTypeInfosByName().get('Both').getRecordTypeId();
+        opportunityCheck oC = new  opportunityCheck();
+        //ist<Opportunity> opportunities = new List<Opportunity>();
+        //opportunities = [SELECT Id, Name, Full_Service_Path__c FROM Opportunity WHERE Full_Service_Path__c='Create Order'];
+        //insert opportunities;
+        
+        Opportunity opp = new Opportunity();
+        opp.RecordTypeId = recordType;
+        opp.Full_Service_Path__c = 'Create Order';
+        opp.CloseDate = Date.newInstance(2022, 05, 09);
+        opp.StageName = 'Prospecting';
+        opp.Name = 'Test';
+        
+        
+        //System.showFullStage(opp, )
+        //insert opp;
+        
+        Opportunity opp1 = new Opportunity();
+        opp1.RecordTypeId = recordType;
+        opp1.Full_Service_Path__c = 'Review Order';
+        opp1.CloseDate = Date.newInstance(2022, 05, 09);
+        opp1.StageName = 'Prospecting';
+        opp1.Name = 'TestTest';
+        //insert opp1;
+        
+        Opportunity opp2 = new Opportunity();
+        opp2.RecordTypeId = recordType;
+        opp2.Full_Service_Path__c = 'Payment';
+        opp2.CloseDate = Date.newInstance(2022, 05, 09);
+        opp2.StageName = 'Prospecting';
+        opp2.Name = 'TestTestTest';
+        //insert opp2;
+        
+        Opportunity opp3 = new Opportunity();
+        opp3.RecordTypeId = recordType;
+        opp3.Full_Service_Path__c = 'Order Parts/Item';
+        opp3.CloseDate = Date.newInstance(2022, 05, 09);
+        opp3.StageName = 'Prospecting';
+        opp3.Name = 'TestT';
+        //insert opp3;
+        
+        Opportunity opp4 = new Opportunity();
+        opp4.RecordTypeId = recordType;
+        opp4.Full_Service_Path__c = 'Received Parts/Item';
+        opp4.CloseDate = Date.newInstance(2022, 05, 09);
+        opp4.StageName = 'Prospecting';
+        opp4.Name = 'TestTes';
+        //insert opp4;
+        
+        Opportunity opp5 = new Opportunity();
+        opp5.RecordTypeId = recordType;
+        opp5.Full_Service_Path__c = 'Inspect';
+        opp5.CloseDate = Date.newInstance(2022, 05, 09);
+        opp5.StageName = 'Prospecting';
+        opp5.Name = 'TestTestT';
+        //insert opp5;
+        
+        Opportunity opp6 = new Opportunity();
+        opp6.RecordTypeId = recordType;
+        opp6.Full_Service_Path__c = 'Assembly';
+        opp6.CloseDate = Date.newInstance(2022, 05, 09);
+        opp6.StageName = 'Prospecting';
+        opp6.Name = 'TestTestTe';
+        //insert opp6;
+        
+        Opportunity opp7 = new Opportunity();
+        opp7.RecordTypeId = recordType;
+        opp7.Full_Service_Path__c = 'Assign';
+        opp7.CloseDate = Date.newInstance(2022, 05, 09);
+        opp7.StageName = 'Prospecting';
+        opp7.Name = 'TestTestTes';
+        //insert opp7;
+        
+        Opportunity opp8 = new Opportunity();
+        opp8.RecordTypeId = recordType;
+        opp8.Full_Service_Path__c = 'In-Progress';
+        opp8.CloseDate = Date.newInstance(2022, 05, 09);
+        opp8.StageName = 'Prospecting';
+        opp8.Name = 'TestTestTestT';
+        //insert opp8;
+        
+        Opportunity opp9 = new Opportunity();
+        opp9.RecordTypeId = recordType;
+        opp9.Full_Service_Path__c = 'Finished';
+        opp9.CloseDate = Date.newInstance(2022, 05, 09);
+        opp9.StageName = 'Prospecting';
+        opp9.Name = 'TestTestTestTe';
+        //insert opp9;
+        
+        List<Opportunity> oppoList = new List<Opportunity>();
+        oppoList.add(opp);
+        
+        List<Opportunity> oppoList1 = new List<Opportunity>();
+        oppoList1.add(opp1);
+        
+        List<Opportunity> oppoList2 = new List<Opportunity>();
+        oppoList2.add(opp2);
+        
+        List<Opportunity> oppoList3 = new List<Opportunity>();
+        oppoList3.add(opp3);
+        
+        List<Opportunity> oppoList4 = new List<Opportunity>();
+        oppoList4.add(opp4);
+        
+        List<Opportunity> oppoList5 = new List<Opportunity>();
+        oppoList5.add(opp5);
+        
+        List<Opportunity> oppoList6 = new List<Opportunity>();
+        oppoList6.add(opp6);
+        
+        List<Opportunity> oppoList7 = new List<Opportunity>();
+        oppoList7.add(opp7);
+        
+        List<Opportunity> oppoList8 = new List<Opportunity>();
+        oppoList8.add(opp8);
+        
+        List<Opportunity> oppoList9 = new List<Opportunity>();
+        oppoList9.add(opp9);
+        
+       
+            if(oc.showFullStage() == oppoList)
+            {
+                System.debug('I work');
+            }  
+            if(oc.showFullStage() == oppoList1)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() == oppoList2)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() == oppoList3)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() == oppoList4)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() == oppoList5)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() == oppoList6)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() == oppoList7)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() == oppoList8)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() == oppoList9)
+            {
+                System.debug('I work');
+            }   
+        
+        if(oc.showFullStage() != oppoList)
+            {
+                System.debug('I work');
+            }  
+            if(oc.showFullStage() != oppoList1)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() != oppoList2)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() != oppoList3)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() != oppoList4)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() != oppoList5)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() != oppoList6)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() != oppoList7)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() != oppoList8)
+            {
+                System.debug('I work');
+            } 
+            if(oc.showFullStage() != oppoList9)
+            {
+                System.debug('I work');
+            }
+            Test.stopTest();
+    }
+
+}
