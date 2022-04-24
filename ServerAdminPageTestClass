@@ -1,0 +1,71 @@
+@isTest
+private class ServerAdminPageTestClass {
+
+    @isTest
+    public static void createHostTestClass(){
+        ServerPageController testController = new ServerPageController();
+        
+        testController.createHost();
+        
+        Server__c testServer= new Server__c();
+        Host_Location__c testHL = new Host_Location__c();
+        Account testAccount= new Account();
+        
+        testAccount.name='Test Account';
+        insert testAccount;
+        
+        
+        
+        testServer.name='Test Server';
+        testServer.Server_ID__c='Test ID';
+        testServer.Account__c= testAccount.Id;
+        insert testServer;
+        
+        testHL.name='Test HL';
+        testHL.Address__c='Test Address';
+        insert testHL;
+        
+        testController.myHostName='test Host';
+        testController.myHLOption=testHL.Name;
+        testController.myServOption=testServer.Name;
+        
+        testController.createHost();
+        Host__c getTest= [SELECT Name FROM Host__c WHERE Name=: testController.myHostName];
+       
+        
+    }
+    @isTest
+    public static void testGetMethods(){
+        ServerPageController testController = new ServerPageController();
+        
+        Server__c testServer= new Server__c();
+        Host_Location__c testHL = new Host_Location__c();
+        Account testAccount= new Account();
+        
+        testAccount.name='Test Account';
+        insert testAccount;
+        
+        
+        
+        testServer.name='Test Server';
+        testServer.Server_ID__c='Test ID';
+        testServer.Account__c= testAccount.Id;
+        insert testServer;
+        
+        testHL.name='Test HL';
+        testHL.Address__c='Test Address';
+        insert testHL;
+        
+        Host__c testHost= new Host__c();
+        testHost.name='testHost';
+        testHost.Server__c= testServer.id;
+        testHost.Host_Location__c=testHL.id;
+        insert testHost;
+        
+        system.debug(testController.getHosts());
+        system.debug(testController.getHostLocations());
+        system.debug(testController.getMyServers());
+        
+    }
+    
+}
