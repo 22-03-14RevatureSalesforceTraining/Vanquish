@@ -1,0 +1,29 @@
+@isTest
+private class AccountErrorTest {
+    @isTest static void testStageNamePositive() {
+        Try {
+            Opportunity opp = new Opportunity();
+            opp.Name = 'New Skyline';
+            opp.StageName = 'Prospecting';
+            opp.AccountId = null;
+            insert opp;
+        }catch(exception e){
+            System.debug('This is a positive test.');
+        }                        
+      }
+
+    
+    @isTest static void testStageNameNegative() {
+        //This code will normally give an error message in the 
+        //Account Name field if the StageName equals 'Prospecting' or 'Closed Won'.
+        Try {
+            Opportunity opp = new Opportunity();
+            opp.Name = 'New Skyline';
+            opp.StageName = 'Value Proposition';
+            opp.AccountId = null;
+            insert opp;
+        }catch(exception e){
+            System.debug('This is a positive test.');
+        }
+    }
+}
