@@ -1,0 +1,36 @@
+@isTest
+public class  caseTriggerTest {
+
+
+    @isTest static void caseTriggerTestPositive()
+    {
+        try
+        {
+            Case cas = new Case();
+            cas.Origin = 'Web';
+            cas.Status = 'New';
+            cas.Reason = 'Other';
+            cas.Description = '';
+            insert cas;
+        }
+        catch(exception e)
+        {
+            System.debug('positive test complete');
+        }
+    }
+    @isTest static void caseTriggerTestNegative()
+    {
+        try
+        {
+            Case cas = new Case();
+            cas.Origin = 'Web';
+            cas.Status = 'New';
+            insert cas;
+        }
+        catch(exception e)
+        {
+            System.debug('positive test complete');
+        }
+    }
+    
+ }
