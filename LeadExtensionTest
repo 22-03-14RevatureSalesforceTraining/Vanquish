@@ -1,0 +1,33 @@
+@isTest
+public class LeadExtensionTest{
+
+    private static testMethod void LeadExtensionTest(){
+        
+        Component.Apex.OutputText expectedValue = new Component.Apex.OutputText();
+        
+        expectedValue.value = 1;
+        
+        Lead newLead = new Lead();
+        newLead.firstName = 'Jacob';
+        newLead.lastName = 'Blockey';
+        newLead.company = 'Riot Games';
+        newLead.status = 'Open - Not Contacted';
+        insert newLead;
+        
+        Lead newLeadTwo = new Lead();
+        newLeadTwo.firstName = 'Alberto';
+        newLeadTwo.lastName = 'Vergera';
+        newLeadTwo.company = 'Not Riot Games';
+        newLeadTwo.status = 'Working - Contacted';
+        insert newLeadTwo;
+        
+        if(LeadExtension.getOpenStatus() ==  expectedValue){
+            System.debug('This value is expected');
+        }else{System.debug('this value isn not expected');}
+        
+        if(LeadExtension.getWorkingStatus() ==  expectedValue){
+            System.debug('This value is expected');
+        }else{System.debug('this value isn not expected');}
+
+    }
+}
