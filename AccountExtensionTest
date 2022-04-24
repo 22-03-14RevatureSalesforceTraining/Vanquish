@@ -1,0 +1,17 @@
+@isTest
+public class AccountExtensionTest {
+
+    @isTest static void testAccountNamePositive(){
+    
+         Component.Apex.OutputText testValue = new Component.Apex.OutputText();
+         testValue.value = 'Test Account';
+        
+        Account newAccount = new Account();
+        newAccount.Name = 'Test Account';
+        insert newAccount;
+
+        if(AccountExtension.getAccountQuery() ==  testValue){
+            System.debug('This worked :D');
+        }else{System.debug('This did not work Sad face');}
+    }
+}
