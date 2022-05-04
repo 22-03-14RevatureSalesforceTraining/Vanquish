@@ -1,0 +1,18 @@
+<apex:page controller="opportunityCheck">
+    
+        <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputField value="{!opp.Full_Service_Path__c}" >
+                    <apex:actionSupport event="onchange" action="{!showFullStage}" reRender="pbt"/>
+                </apex:inputField>
+            </apex:pageBlockSection>
+            <apex:pageBlockTable value="{!opportunities}" var="a" id="pbt">
+                <apex:column value="{!a.Name}" />
+                <apex:column value="{!a.Full_Service_Path__c}" />
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+    
+    
+</apex:page>
