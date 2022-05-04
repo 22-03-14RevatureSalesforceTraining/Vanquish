@@ -1,0 +1,22 @@
+@isTest
+public class ServerTestClass {
+	@isTest 
+    public static void triggerTest(){
+        Account testAccount= new Account();
+        testAccount.name= 'testAccount';
+        insert testAccount;
+        
+		Server__c testServ = new Server__c();
+        testServ.name='Test';
+        testServ.Server_ID__c='Test';
+        testServ.Account__c= testAccount.Id;
+        
+        insert testServ;
+        
+        testServ.Active__c=false;
+        update testServ;
+        
+        Task testTask= [SELECT id FROM Task WHERE WhatId=: testServ.Id];
+        system.debug(testTask);
+        }
+}

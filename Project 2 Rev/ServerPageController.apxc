@@ -1,0 +1,46 @@
+public with sharing class ServerPageController {
+    Public string myServOption {get; set;}
+    public string myHLOption {get; set;}
+    public string myHostName {get; set;}
+    
+    public void createHost(){
+        if(myHLOption!= null && myServOption!= null && myServOption != null){
+        	Host__c newHost = new Host__c();
+        	newHost.name=myHostName;
+            
+            Server__c myServer=[SELECT Id FROM Server__c WHERE Name =: myServOption];
+            newHost.Server__c= myServer.id;
+            
+            Host_Location__c myHL= [SELECT Id From Host_Location__c WHERE Name=: myHLOption];
+            newHost.Host_Location__c= myHL.id;
+            insert newHost;
+        }
+    }
+    
+    public List<selectOption> getMyServers(){
+        List<Server__c> myServers= [SELECT Name FROM Server__c];
+        
+        List <selectOption> ourOptions = new List<selectOption>();
+        for(Server__c serv : myServers){
+            ourOptions.add(new selectOption(serv.name, serv.name));
+        }
+        
+        return ourOptions;
+    }
+    
+        public List<selectOption> getHostLocations(){
+        List<Host_Location__c> myHL= [SELECT Name FROM Host_Location__c];
+        
+        List <selectOption> ourOptions = new List<selectOption>();
+        for(Host_Location__c hl : myHL){
+            ourOptions.add(new selectOption(hl.name, hl.name));
+        }
+        
+        return ourOptions;
+    }
+    public List<Host__c> getHosts(){
+        List<Host__c> hosts= [SELECT Name, Server__c, Host_Location__c FROM Host__c ORDER BY LastModifiedDate desc LIMIT 10 ];
+        return hosts;
+    }
+
+}

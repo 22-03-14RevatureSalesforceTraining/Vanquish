@@ -1,0 +1,46 @@
+<apex:page controller="ServerPageController">
+    <apex:slds />
+
+    <apex:pageBlock title="Host Location to Server">
+        <apex:form >
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-12">
+                    Host Name:
+                </div>
+                <div class="slds-col slds-size_3-of-12">
+                    
+                    <apex:inputText value="{!myHostName}"/>
+                </div>
+                <div class="slds-col slds-size_1-of-12">
+                    Server:
+                </div>
+                <div class="slds-col slds-size_3-of-12">
+                    
+                    <apex:selectList value="{!myServOption}">
+                        <apex:selectOptions value="{!myServers}"/>
+                    </apex:selectList>
+                </div>
+                <div class="slds-col slds-size_1-of-12">
+                    Host Location:
+                </div>
+                <div class="slds-col slds-size_3-of-12">
+                    
+                        <apex:selectList value="{!myHLOption}">
+                            <apex:selectOptions value="{!hostLocations}"/>
+                        </apex:selectList>
+                </div>
+                <div class="slds-col slds-size_1-of-8">
+                    
+                    <apex:commandButton value="Create!" action="{!createHost}"/>
+                </div>
+            </div>
+        </apex:form>
+    </apex:pageBlock>
+    <apex:pageBlock title="Recent Hosts">
+        <apex:pageBlockTable value="{!hosts}" var="ht">
+            <apex:column value="{! ht.Name}"/>
+            <apex:column value="{! ht.Server__c}"/>
+            <apex:column value="{! ht.Host_Location__c}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

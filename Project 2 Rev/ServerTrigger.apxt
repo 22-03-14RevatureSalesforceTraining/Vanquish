@@ -1,0 +1,10 @@
+trigger ServerTrigger on Server__c (before insert, before update, before delete, after insert, after update, after delete, after undelete) {
+    for(Server__c srv :trigger.new){
+        if(srv.active__c ==false && trigger.isAfter && trigger.isUpdate){
+            Map<String, Server__c> serverMap= new Map<String, Server__c>();
+            serverMap.put('ServerRecord', srv);
+            Flow.Interview.Inactive_Server_Flow isf= new Flow.Interview.Inactive_Server_Flow(serverMap);
+            isf.start();
+        }
+    }
+}
