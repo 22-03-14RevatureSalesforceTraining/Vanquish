@@ -1,0 +1,41 @@
+<apex:page controller="AssociationController">
+<apex:form >
+  <apex:SectionHeader title="Welcome!" subtitle="Account Association Page"/>
+  <apex:pageBlock >
+  <apex:outputPanel layout="block" style="overflow:auto;width:400px;height:150px">
+      <apex:pageBlockTable value="{!accLst}" var="a">
+         <apex:column headerValue="Name">
+          <apex:commandLink action="{!selAcc}">
+          <apex:param name="conLst" value="{!a.Id}"/>
+          <apex:outputText value="{!a.Name}"/>
+          </apex:commandlink>
+          </apex:column>
+          <!--accounts-->
+           </apex:pageBlockTable>
+           </apex:outputPanel>
+      </apex:pageBlock>
+      <apex:pageBlock >
+      <apex:pageBlockTable value="{!accounts}" var="a">
+          <apex:column headerValue="AccountName" value="{!a.Name}"/>
+
+          <!--contacts-->
+          <apex:column headerValue="ListContacts">
+               <apex:pageBlockTable value="{!a.Contacts}" var="c">
+               <apex:column headerValue="ContactName">
+                   <apex:outputText value="{!c.LastName}"></apex:outputText>
+          </apex:column>
+          <!--opportunities-->
+          <apex:column headerValue="Opportunity List">
+              <apex:pageBlockTable value="{!a.Opportunities}" var="p">
+              <apex:column headerValue="Opportunity Name">
+              <apex:outputText value="{!p.Name}">
+              </apex:outputText>
+              </apex:column>
+      </apex:pageBlockTable><!-- End opportunity-->
+          </apex:column>
+          </apex:pageBlockTable><!-- End contact-->
+          </apex:column>
+          </apex:pageBlockTable><!--end account-->
+          </apex:pageBlock>
+</apex:form>
+</apex:page>
