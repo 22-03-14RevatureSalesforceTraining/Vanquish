@@ -1,0 +1,37 @@
+@isTest
+Public Class associationControllerTest {
+
+    Static Account acc = new Account();
+    Static Contact con = new Contact();
+    Static Opportunity opp = new Opportunity();
+
+    @isTest
+    Public Static Void Positive_Test() {
+    try{
+        acc.Name='test';
+        acc.Id='1';
+        con.Id='1';
+        con.LastName='testlastname';
+        opp.Name='testName';
+        insert acc;
+        insert opp;
+        insert con;
+        
+        AssociationController ac = new AssociationController();
+        ac.selAcc();
+        System.debug('This positive test was successful');
+    }catch (exception e) {
+        System.debug('This positive test did not work');
+    }
+    }
+    
+    @isTest
+    Public Static Void Negative_Test() {
+    try{
+        AssociationController ac = new AssociationController();
+        ac.selAcc();
+    }catch (exception e) {
+        System.debug('This negative test did not work just as expected');
+    }
+    }
+}
