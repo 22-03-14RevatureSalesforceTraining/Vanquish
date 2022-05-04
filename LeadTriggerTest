@@ -1,0 +1,43 @@
+@isTest
+public class LeadTriggerTest {
+  @isTest 
+    public static void testLeadTrigger(){
+
+    try{
+        //first lead
+         Lead testLead= new Lead();
+         testLead.firstName= 'Bertha';
+         testLead.lastName= 'Berks';
+         testLead.company = 'notbeans';  
+         insert testLead;
+    
+        //second lead
+        Lead testLeadTwo= new Lead();
+        testLeadTwo.firstName= 'Bertha';
+        testLeadTwo.lastName= 'Berks';
+        testLeadTwo.company = 'beans';  
+        insert testLeadTwo;
+    }catch(exception e){
+        System.debug('this was the result I was expecting');
+    }
+
+    
+        try{
+            //third lead
+            Lead testLeadThree= new Lead();
+            testLeadThree.firstName= 'Ted';
+            testLeadThree.lastName= 'Moore';
+            testLeadThree.company = 'Gummy bears';  
+            insert testLeadThree;
+    
+            //fourth lead
+            Lead testLeadFour= new Lead();
+            testLeadFour.firstName= 'Alberto';
+            testLeadFour.lastName= 'Vergera';
+            testLeadFour.company = 'Revature';  
+            insert testLeadFour;
+    }catch(exception e){
+        System.debug('this should not have errored');
+    }
+}
+}
