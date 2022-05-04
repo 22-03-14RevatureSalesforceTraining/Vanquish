@@ -1,0 +1,32 @@
+public class LeadExtension {
+    
+    public LeadExtension(ApexPages.StandardSetController con) { }
+    
+    public static Component.Apex.OutputText getOpenStatus(){
+        Component.Apex.OutputText largestValue = new Component.Apex.OutputText();
+        List<Lead> leadList = [SELECT status FROM Lead];
+        Integer amtOfLeads = 0;
+        for(Lead l : LeadList){
+            if(l.status == 'Open - Not Contacted'){
+                System.debug(l.status);
+                amtOfLeads ++;
+            }
+        }
+        largestValue.value = amtOfLeads;
+        return largestValue;
+    }
+    
+    public static Component.Apex.OutputText getWorkingStatus(){
+        Component.Apex.OutputText workingStatus = new Component.Apex.OutputText();
+        List<Lead> leadList = [SELECT status FROM Lead];
+        Integer amtOfLeads = 0;
+        for(Lead l : LeadList){
+            if(l.status == 'Working - Contacted'){
+                System.debug(l.status);
+                amtOfLeads ++;
+            }
+        }
+        workingStatus.value = amtOfLeads;
+        return workingStatus;
+    }
+}
