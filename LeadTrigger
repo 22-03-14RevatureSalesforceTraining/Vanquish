@@ -1,0 +1,16 @@
+trigger LeadTrigger on Lead (before insert, before update, before delete, after insert, after update, after delete, after undelete) {
+
+    List<Lead> leadFirst = new List<Lead>();
+    leadFirst = [SELECT firstName FROM lead];
+    
+    List<lead> leadLast = new List<Lead>();
+    leadLast = [SELECT lastName FROM lead];
+    
+    for(Lead l : trigger.new){
+        for(Integer i = 0; i < leadFirst.Size(); i++){
+            if(l.firstName.equals(leadFirst[i].firstName) && l.lastName.equals(leadLast[i].lastName) && Trigger.isBefore && Trigger.isInsert){
+                l.FirstName.addError('A lead with that name already exists');
+            }                 
+        }
+    }
+}
