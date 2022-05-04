@@ -1,0 +1,127 @@
+@isTest
+public class Host_Location_TriggerTest {
+    @isTest 
+    public static void positive_Test_Host_Location_Trigger(){
+
+    try{
+        Host_Location__c hl0 = new Host_Location__c();
+        hl0.Name = 'Test0';
+        hl0.Address__c = 'addressTest0';
+        insert hl0;
+        
+        Host_Location__c hl1 = new Host_Location__c();
+        hl1.Name = 'Test1';
+        hl1.Address__c = 'addressTest1';
+        insert hl1;
+        
+        Host_Location__c hl2 = new Host_Location__c();
+        hl2.Name = 'Test2';
+        hl2.Address__c = 'addressTest2';
+        insert hl2;
+        
+        Host_Location__c hl3 = new Host_Location__c();
+        hl3.Name = 'Test3';
+        hl3.Address__c = 'addressTest3';
+        insert hl3;
+        
+        Host_Location__c hl4 = new Host_Location__c();
+        hl4.Name = 'Test4';
+        hl4.Address__c = 'addressTest4';
+        insert hl4;
+        
+        Host_Location__c hl5 = new Host_Location__c();
+        hl5.Name = 'Test5';
+        hl5.Address__c = 'addressTest5';
+        insert hl5;
+        
+        Host_Location__c hl6 = new Host_Location__c();
+        hl6.Name = 'Test6';
+        hl6.Address__c = 'addressTest6';
+        insert hl6;
+        
+        Host_Location__c hl7 = new Host_Location__c();
+        hl7.Name = 'Test7';
+        hl7.Address__c = 'addressTest7';
+        insert hl7;
+        
+        Host_Location__c hl8 = new Host_Location__c();
+        hl8.Name = 'Test8';
+        hl8.Address__c = 'addressTest8';
+        insert hl8;
+        
+        Host_Location__c hl9 = new Host_Location__c();
+        hl9.Name = 'Test9';
+        hl9.Address__c = 'addressTest9';
+        insert hl9;
+        
+        Host_Location__c hl10 = new Host_Location__c();
+        hl9.Name = 'Test10';
+        hl10.Address__c = 'addressTest10';
+        insert hl10;
+            
+    }catch(exception e){
+        System.debug('Positive Test Complete');
+    }
+
+    }
+    
+    @isTest 
+    public static void negative_Test_Host_Location_Trigger(){
+
+    try{
+        Host_Location__c hl0 = new Host_Location__c();
+        hl0.Name = 'Test0';
+        hl0.Address__c = 'addressTest0';
+        insert hl0;
+        
+        Host_Location__c hl1 = new Host_Location__c();
+        hl1.Name = 'Test1';
+        hl1.Address__c = 'addressTest1';
+        insert hl1;
+        
+        Host_Location__c hl2 = new Host_Location__c();
+        hl2.Name = 'Test2';
+        hl2.Address__c = 'addressTest2';
+        insert hl2;
+        
+        Host_Location__c hl3 = new Host_Location__c();
+        hl3.Name = 'Test3';
+        hl3.Address__c = 'addressTest3';
+        insert hl3;
+        
+        Host_Location__c hl4 = new Host_Location__c();
+        hl4.Name = 'Test4';
+        hl4.Address__c = 'addressTest4';
+        insert hl4;
+        
+        Host_Location__c hl5 = new Host_Location__c();
+        hl5.Name = 'Test5';
+        hl5.Address__c = 'addressTest5';
+        insert hl5;
+        
+        Host_Location__c hl6 = new Host_Location__c();
+        hl6.Name = 'Test6';
+        hl6.Address__c = 'addressTest6';
+        insert hl6;
+        
+        Host_Location__c hl7 = new Host_Location__c();
+        hl7.Name = 'Test7';
+        hl7.Address__c = 'addressTest7';
+        insert hl7;
+        
+        Host_Location__c hl8 = new Host_Location__c();
+        hl8.Name = 'Test8';
+        hl8.Address__c = 'addressTest8';
+        insert hl8;
+        
+        Host_Location__c hl9 = new Host_Location__c();
+        hl9.Name = 'Test9';
+        hl9.Address__c = 'addressTest9';
+        insert hl9;
+            
+    }catch(exception e){
+        System.debug('Negative Test Complete');
+    }
+
+    }
+}
