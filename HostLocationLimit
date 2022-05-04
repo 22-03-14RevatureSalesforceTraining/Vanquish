@@ -1,0 +1,16 @@
+trigger hostLocationLimit on Host_Location__c (before insert) {
+
+    if(trigger.isInsert && trigger.isBefore) {
+        integer monthNumber = Date.Today().Month();
+        integer yearNumber = Date.Today().Year();
+        integer maxLocations = 10;
+        
+        List<Host_Location__c> yearlyLocationList = [SELECT Name, CreatedDate FROM Host_Location__c WHERE CALENDAR_YEAR(CreatedDate) = :yearNumber AND CALENDAR_MONTH(CreatedDate) = :monthNumber];
+        
+        if(yearlyLocationList.Size() >= maxLocations) {
+            for(Host_Location__c hostloc:trigger.new) {
+                hostloc.addError('Sorry but we have no more buildings available');
+            }
+        }
+    }
+}
