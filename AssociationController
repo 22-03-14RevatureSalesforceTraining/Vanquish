@@ -1,0 +1,21 @@
+public with sharing class AssociationController {
+
+    public List<Contact> conLst {get; set;}
+    public List<Account> accounts {get; set;}
+    public List<Account> accLst {get; set;}
+    
+    public AssociationController (){
+         accLst= [SELECT Id, Name FROM Account ];
+         system.debug(accLst);
+   
+   }
+
+    public PageReference selAcc() {
+         string getid=apexpages.currentpage().getparameters().get('conlst');
+         accounts = [SELECT Id, Name, (SELECT Id, LastName FROM Contacts), (SELECT Name FROM Opportunities) FROM Account WHERE id=:getid];
+         system.debug(accounts);
+         return null;
+    }
+    
+
+}
