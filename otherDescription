@@ -1,0 +1,18 @@
+// Trigger to put an error if the reason is other and there is no reason in the descriptions
+
+trigger otherDescription on Case (before insert, before update, after update, after insert) {
+
+    for(Case cas:trigger.new)
+    {
+        // will trigger if case reason is other and case description is empty
+        // will trigger before being saved and wehn inserted
+        if (cas.Reason == 'Other' && String.isEmpty(cas.Description) && trigger.isbefore && 
+        trigger.isinsert)
+        {
+               //adds an error to the screen     
+               cas.addError('Please add a reason for other');
+               cas.Reason.addError('Please add a reason for other');
+               cas.Description.addError('Please add a reason for other');
+        }
+    }
+}
