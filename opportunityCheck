@@ -1,0 +1,55 @@
+//this is the apex code for the Opportunity stage check visualforce page
+//it get the information of all the oportunites for the reocord type Both 
+//and return the all the opportunties that are on selected stage
+
+
+public class  opportunityCheck{
+
+    public Opportunity opp {get; set;}
+    public List<Opportunity> opportunities {get; set;}
+    
+    public opportunityCheck()
+    {
+        opp = new Opportunity();
+        opportunities = new List<Opportunity>();
+    }
+    
+    
+    public List<Opportunity> showFullStage(){
+        //Both Path
+        
+        if(opp.Full_Service_Path__c== 'Create Order'){
+             opportunities = [SELECT Id, Name, Full_Service_Path__c FROM Opportunity WHERE Full_Service_Path__c='Create Order'];
+        }
+        else if(opp.Full_Service_Path__c== 'Review Order'){
+            opportunities = [SELECT Id, Name, Full_Service_Path__c FROM Opportunity WHERE Full_Service_Path__c='Review Order'];
+        }
+        else if(opp.Full_Service_Path__c== 'Payment'){
+            opportunities = [SELECT Id, Name, Full_Service_Path__c FROM Opportunity WHERE Full_Service_Path__c='Payment'];
+        }
+        else if(opp.Full_Service_Path__c== 'Order Parts/Item'){
+            opportunities = [SELECT Id, Name, Full_Service_Path__c FROM Opportunity WHERE Full_Service_Path__c='Order Parts/Item'];
+        }
+        else if(opp.Full_Service_Path__c== 'Received Parts/Item'){
+            opportunities = [SELECT Id, Name, Full_Service_Path__c FROM Opportunity WHERE Full_Service_Path__c='Received Parts/Item'];
+        }
+        else if(opp.Full_Service_Path__c== 'Inspect'){
+            opportunities = [SELECT Id, Name, Full_Service_Path__c FROM Opportunity WHERE Full_Service_Path__c='Inspect'];
+        }
+        else if(opp.Full_Service_Path__c== 'Assembly'){
+            opportunities = [SELECT Id, Name, Full_Service_Path__c FROM Opportunity WHERE Full_Service_Path__c='Assembly'];
+        }
+        else if(opp.Full_Service_Path__c== 'Assign'){
+            opportunities = [SELECT Id, Name, Full_Service_Path__c FROM Opportunity WHERE Full_Service_Path__c='Assign'];
+        }
+           else if(opp.Full_Service_Path__c== 'In-Progress'){
+            opportunities = [SELECT Id, Name, Full_Service_Path__c FROM Opportunity WHERE Full_Service_Path__c='In-Progress'];
+        }
+        else if(opp.Full_Service_Path__c== 'Finished'){
+            opportunities = [SELECT Id, Name, Full_Service_Path__c FROM Opportunity WHERE Full_Service_Path__c='Finished'];
+        }
+
+        return opportunities;
+
+    }
+}
