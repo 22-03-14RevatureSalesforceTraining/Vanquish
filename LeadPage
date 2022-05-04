@@ -1,0 +1,33 @@
+<apex:page StandardController="Lead" recordSetVar="leadSet" extensions="LeadExtension">
+    <apex:slds />
+    <apex:form >
+        <!--The block used for a search? -->
+        <!--My table for all the leads as well as my extensions -->
+    	<apex:pageBlock title="Hello {!$User.FirstName} {!$User.LastName}! Here are our Leads: ">
+        	<div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    Ammount of leads that are: "Open - Not Contacted":&nbsp;
+                    <!--Counts the leads that are open -->
+                    <apex:dynamicComponent componentValue="{!openStatus}"/> <br/>
+                    <!--Counts the leads that are working -->
+                    Ammount of leads that are: "Working - Contacted" &nbsp;
+                    <apex:dynamicComponent componentValue="{!workingStatus}"/>
+                </div>
+                
+                 <!--All the columns I wanted -->
+                <div class="slds-col slds-size_7-of-8">
+                    <apex:pageBlockTable value="{!leadSet}" var="lS" >
+                        <apex:column value="{!lS.Name}"></apex:column>
+                        <apex:column value="{!lS.NumberofLocations__c}"></apex:column>
+                        <apex:column value="{!lS.Email}"></apex:column>
+                        <apex:column value="{!lS.Status}"></apex:column> 
+                        <apex:column value="{!lS.Phone}"></apex:column>
+                        <apex:column value="{!lS.ProductInterest__c}"></apex:column>
+                        <apex:column value="{!lS.Title}"/>
+                        <apex:column value="{!lS.OwnerId}"></apex:column>
+                    </apex:pageBlockTable>
+                </div>
+            </div>
+    	</apex:pageBlock>
+    </apex:form>    
+</apex:page>
