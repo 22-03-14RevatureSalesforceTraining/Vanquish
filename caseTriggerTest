@@ -1,0 +1,42 @@
+// This is the Apex test class for the otherDescription
+
+@isTest
+public class  caseTriggerTest {
+
+//positive test
+    @isTest static void caseTriggerTestPositive()
+    {
+        try
+        {
+            //create a case to test
+            Case cas = new Case();
+            cas.Origin = 'Web';
+            cas.Status = 'New';
+            cas.Reason = 'Other';
+            cas.Description = '';
+            insert cas;
+        }
+        catch(exception e)
+        {
+            System.debug('positive test complete');
+        }
+    }
+    
+    //negative test
+    @isTest static void caseTriggerTestNegative()
+    {
+        try
+        {
+            //create a case to test
+            Case cas = new Case();
+            cas.Origin = 'Web';
+            cas.Status = 'New';
+            insert cas;
+        }
+        catch(exception e)
+        {
+            System.debug('positive test complete');
+        }
+    }
+    
+ }
