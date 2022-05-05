@@ -1,3 +1,5 @@
+## Project 1
+
 ## Project Description
 
 Associates created a company of their own design, and then handled the administration side of the business.
