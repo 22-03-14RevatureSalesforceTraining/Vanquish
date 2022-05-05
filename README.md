@@ -32,9 +32,9 @@ To-do list:
 
 ## Contributors
 
-Alberto Vergara
-Jacob Blockey
-Theodore Moore
-Dalton Faber
+Alberto Vergara <br>
+Jacob Blockey <br>
+Theodore Moore <br>
+Dalton Faber <br>
 Serena Daley
 
