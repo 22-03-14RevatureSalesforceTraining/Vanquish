@@ -68,7 +68,7 @@ Controller Extension)
 SALES CLOUD:
 * Leads & Opportunities should be customized as needed to reflect the business 
 being modeled.
-  * Leads should have multiple rule entries for both Assignment Rules & AutoResponse Rules. 
+  * Leads should have multiple rule entries for both Assignment Rules & Auto-Response Rules. 
   * Web-to-lead should be set up to allow a customer to submit a lead.
   * An Opportunity path should provide step by step guidance and a 
 celebratory effect upon completion.
