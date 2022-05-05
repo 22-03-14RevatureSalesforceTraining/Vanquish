@@ -3,7 +3,7 @@
 ## Project Description
 
 The associate should create a custom Salesforce application based on a 
-business of their choosing. This is mostly a
+business of their choosing. This is mostly admin changes within a Salesforce Playground
 
 ## Technologies Used
 
