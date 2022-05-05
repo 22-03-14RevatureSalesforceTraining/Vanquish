@@ -98,8 +98,8 @@ consumes the selected webservice.
 
 ## Contributors
 
-> Jacob Blockey
-> Serena Daley
-> Alberto Vergara
+> Jacob Blockey,
+> Serena Daley,
+> Alberto Vergara,
 > Theodore Moore
 
