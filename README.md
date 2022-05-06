@@ -2,8 +2,8 @@
 
 ## Project Description
 
-The associate squad should create a custom Salesforce application based on a 
-business of their choosing.
+Worked as a squad to create a custom Salesforce application based on a 
+business of selling IT products and solutions to small businesses.
 
 ## Technologies Used
 
