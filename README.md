@@ -100,5 +100,5 @@ the custom app homepage.
 * Proper sharing configured through folders for both dashboards and reports 
 across multiple users
 
-## Features:
+## Usage:
 * Project 1 was completed using Salesforce. All of the subsequent code is located there.
