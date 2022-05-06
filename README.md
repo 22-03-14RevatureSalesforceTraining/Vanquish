@@ -9,12 +9,11 @@ business of their choosing. This is mostly admin changes within a Salesforce Pla
 
 * Salesforce
 
-## Core Declarative Requirements:
+## Features:
 
 ERD:
-* Prior to beginning work on the org, the associate should create an ERD mockup
-of the org they intend to create. This original mockup should be uploaded to 
-their branch on the squad repo.
+* Prior to beginning work on the org, an ERD mockup of the org they intend to create was 
+* created and the original mockup is uploaded to the Serena P1 branch.
 
 SALES CLOUD:
 * Leads & Opportunities should be customized as needed to reflect the business 
@@ -100,3 +99,6 @@ REPORTS & DASHBOARDS (PERHIPHERAL)
 the custom app homepage.
 * Proper sharing configured through folders for both dashboards and reports 
 across multiple users
+
+## Features:
+* Project 1 was completed using Salesforce. All of the subsequent code is located there.
